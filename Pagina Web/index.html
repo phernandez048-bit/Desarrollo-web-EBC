@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Paola Hernández">
+    <meta name="copyright" content="© 2025 Luz & Ritmo">
+    <title>Luz & Ritmo</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+<div class="social">
+  <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+  <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+  <a href="https://soundcloud.com/" target="_blank"><i class="fab fa-soundcloud"></i></a>
+</div>
+
+    <a href="#" class="search"><i class="fa fa-search"></i></a>
+  </nav>
+
+  <!-- Header principal -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>L U Z &nbsp; & &nbsp; R I T M O</h1>
+      <h6 style="background: rgba(0, 0, 0, 0.5);">Explora el universo de la <span>música</span> con Paola Hernández</h6> 
+      <button onclick="toggleModal('contacto')">CONTACTO</button>
+    </div>
+    <img src="Imagenes/img.concierto.jpg.jpg" alt="Luz & Ritmo portada">
+
+    <div class="slide">
+        <img src="Imagenes/img1.jpg.jpg" alt="Imagen 2">
+        <div class="hero-content">
+          <h1>Ritmos que Conectan</h1>
+          <h6 style="background: rgba(0, 0, 0, 0.5);">La música como forma de unión</h6>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="Imagenes/img2.jpg.jpg" alt="Imagen 3">
+        <div class="hero-content">
+          <h1>Vive el Escenario</h1>
+          <h6 style="background: rgba(0, 0, 0, 0.5);">Siente la energía de Luz & Ritmo</h6>
+        </div>
+      </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="content">
+    <!-- Blog posts -->
+    <section class="blog">
+      <article>
+        <h3>Indie Rock: El renacer de lo alternativo</h3>
+        <h5>Artículo destacado <span>Mayo 12, 2025</span></h5>
+        <img src="Imagenes/indie.jpg.jpg" alt="Indie rock">
+        <p>Explora cómo bandas como Arctic Monkeys, The Strokes y Tame Impala redefinieron el sonido de los 2000 con frescura y autenticidad.</p>
+        <div class="actions">
+          <button onclick="likeFunction(this)"><i class="fa fa-thumbs-up"></i> Me gusta</button>
+          <button onclick="toggleComments('coment1')">Comentarios <span>1</span></button>
+        </div>
+        <div id="coment1" class="comments">
+          <p>Laura: ¡El indie me inspira todos los días! 🎶</p>
+        </div>
+      </article>
+
+      <article>
+        <h3>Trap Latino: De calle a fenómeno global</h3>
+        <h5>Género en tendencia <span>Abril 28, 2025</span></h5>
+        <img src="Imagenes/trap.jpg.jpg" alt="Trap latino">
+        <p>De movimiento callejero a hit mundial, el trap ha marcado a una generación con figuras como Anuel AA, Bad Bunny y Mora.</p>
+        <div class="actions">
+          <button onclick="likeFunction(this)"><i class="fa fa-thumbs-up"></i> Me gusta</button>
+          <button onclick="toggleComments('coment2')">Comentarios <span>2</span></button>
+        </div>
+        <div id="coment2" class="comments">
+          <p>Andrés: ¡El trap cambió la escena para siempre! 🔥</p>
+          <p>Sofía: Es imposible no bailar cuando suena.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="card">
+        <h4>Paola Hernández</h4>
+        <p>Amante de los sonidos que cuentan historias, desde el indie hasta los géneros urbanos que marcan tendencia. 🎧</p>
+      </div>
+
+      <div class="card">
+        <h4>Suscríbete</h4>
+        <input type="email" placeholder="Ingresa tu correo">
+        <button onclick="toggleModal('contacto')">Suscribirme</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Modal -->
+  <div id="contacto" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="toggleModal('contacto')">&times;</span>
+      <h2>Contáctame</h2>
+      <input type="email" placeholder="Ingresa tu correo">
+      <button onclick="toggleModal('contacto')">Enviar</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <button onclick="scrollToTop()"><i class="fa fa-arrow-up"></i> Subir</button>
+    <p>© 2025 Luz & Ritmo | Creado por Paola Hernández</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/funciones.js"></script>
+</body>
+</html>
