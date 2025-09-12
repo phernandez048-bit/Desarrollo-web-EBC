@@ -1,29 +1,46 @@
-// Mostrar/Ocultar modal
-function toggleModal(id) {
-  var modal = document.getElementById(id);
-  if (modal.style.display === "block") {
-    modal.style.display = "none";
-  } else {
-    modal.style.display = "block";
-  }
-}
-
-// Botón "Me gusta"
-function likeFunction(btn) {
-  btn.innerHTML = "<i class='fa fa-thumbs-up'></i> Te gusta";
-}
-
-// Mostrar comentarios
+// Mostrar u ocultar comentarios
 function toggleComments(id) {
-  var comments = document.getElementById(id);
-  if (comments.style.display === "block") {
-    comments.style.display = "none";
-  } else {
-    comments.style.display = "block";
-  }
+  const elem = document.getElementById(id);
+  elem.style.display = elem.style.display === "block" ? "none" : "block";
 }
 
-// Botón scroll arriba
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+// Función para dar "me gusta"
+function likeFunction(button) {
+  button.style.fontWeight = "bold";
+  button.innerHTML = "✓ Me gusta";
 }
+
+// Abrir y cerrar modal
+function toggleModal(id) {
+  const modal = document.getElementById(id);
+  modal.style.display = modal.style.display === "flex" ? "none" : "flex";
+}
+
+// Scroll hacia arriba
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+// Carrusel de imágenes
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active"); // Quitamos la clase 'active' de todos
+    if (i === index) {
+      slide.classList.add("active"); // Solo activamos el slide actual
+    }
+  });
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length; // Siguiente slide
+  showSlide(currentSlide);
+}
+
+// Mostrar la primera imagen al inicio
+showSlide(currentSlide);
+
+// Cambiar automáticamente cada 10 segundos
+setInterval(nextSlide, 10000);
